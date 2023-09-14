@@ -19,14 +19,11 @@ echo "Creating a Python virtual environment"
 python3 -m venv ~/backend-songs-venv
 
 echo "Configuring the developer environment..."
-echo "# Backend Capstone Project additions" >> ~/.bashrc
-echo "export GITHUB_ACCOUNT=$GITHUB_ACCOUNT" >> ~/.bashrc
-echo 'export PS1="\[\e]0;\u:\W\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ "' >> ~/.bashrc
 
 echo "Installing Python depenencies..."
 source ~/backend-songs-venv/bin/activate && python3 -m pip install --upgrade pip wheel
 source ~/backend-songs-venv/bin/activate && pip install -r requirements.txt
-echo "source ~/backend-songs-venv/bin/activate" >> ~/.bashrc
+
 
 echo "****************************************"
 echo " Capstone Environment Setup Complete"
